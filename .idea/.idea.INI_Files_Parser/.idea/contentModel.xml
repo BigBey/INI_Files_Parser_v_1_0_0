@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\zenbook\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\zenbook\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_INI_Files_Parser.883329157.00" t="ExcludeRecursive" />
-    <e p="C:\Users\zenbook\RiderProjects\INI_Files_Parser" t="IncludeFlat">
+    <e p="C:\Users\zenbook\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_INI_Files_Parser.-354118438.00" t="ExcludeRecursive" />
+    <e p="C:\Users\zenbook\RiderProjects\INI_Files_Parser_v_1_0_0" t="IncludeFlat">
       <e p="INI_Files_Parser" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="INI_Files_Parser.csproj" t="IncludeRecursive" />
