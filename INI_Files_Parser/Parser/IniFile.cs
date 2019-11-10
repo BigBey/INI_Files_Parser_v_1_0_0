@@ -1,9 +1,13 @@
-﻿namespace INI_Files_Parser.Parser
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+
+namespace INI_Files_Parser.Parser
 {
     public class IniFile
     {
         // private
-        /*
         private string _iniFileFilename;
 
         private List<IniSection> iniContent;
@@ -513,6 +517,6 @@
 
             DateTime result = DateTime.Parse(ReadString(sectionName, keyName, "0"));
             return result;
-        }*/
+        }
     }
 }

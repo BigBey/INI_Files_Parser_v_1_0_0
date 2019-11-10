@@ -39,6 +39,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Parser\IniFile.cs" />
+        <Compile Include="Parser\IniSection.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
