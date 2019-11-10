@@ -36,7 +36,7 @@ namespace INI_Files_Parser.Parser
             
             foreach (string line in lines)
             {
-                if (line != "")
+                if ((line != "") && (line.Substring(0, 1) != ";"))
                 {                
                     // If new section
                     if (line.Substring(0, 1) == "[")
@@ -49,20 +49,17 @@ namespace INI_Files_Parser.Parser
                     {
                         // Treat as value, if not empty
                         string[] strList = line.Split('='); // use the ' to define a char
-                        string key = strList[0];
-                        string value = strList[1];
+                        string key = strList[0].Replace(" ", "");
+                        string value = strList[1].Split(';')[0].Replace(" ", "");
                         if (strList.Length > 2)
                         {
                             for (int i = 2; i < strList.Length; i++)
                             {
-                                value = value + "=" + strList[i];
+                                value = value + "=" + strList[i].Split(';')[0].Replace(" ", "");
                             }
                         }
 
-                       if (section != null) // write only if a section is set
-                       {
-                           section.Add(key, value);
-                       }
+                        section?.Add(key, value);
                     }
                 }
             }
@@ -100,11 +97,8 @@ namespace INI_Files_Parser.Parser
         {
             return GetSection(sectionName);
         }
-
-        /// <summary>
+        
         /// Call ReadSections to retrieve the names of all sections in an INI file into a List of string. 
-        /// </summary>
-        /// <returns></returns>
         public List<string> ReadSections()
         {
             var result = new List<string>();
@@ -116,12 +110,9 @@ namespace INI_Files_Parser.Parser
 
             return result;
         }
-
-        /// <summary>
+        
         /// Call ReadSectionKeys to read the keys, within a specified section of an INI file into a List of string.
-        /// </summary>
         /// <param name="sectionName">Name of an INI file section</param>
-        /// <returns></returns>
         public List<string> ReadSectionKeys(string sectionName)
         {
             var section = GetSection(sectionName);
